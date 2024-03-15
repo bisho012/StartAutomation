@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Feb 05 15:37:56 GST 2024","Mon Feb 05 15:38:00 GST 2024","4095","Default Suite","AutoTrustDemo","com.automation.tests.RegisterTest","com.automation.tests.RegisterTest","createAccount","createAccount",""
+"broken","Thu Feb 01 15:13:39 GST 2024","Thu Feb 01 15:13:39 GST 2024","2","Default Suite","AutoTrustDemo","com.automation.tests.RegisterTest","com.automation.tests.RegisterTest","setUp","setUp",""
+"passed","Mon Feb 05 13:56:15 GST 2024","Mon Feb 05 13:56:30 GST 2024","15231","Default Suite","AutoTrustDemo","com.automation.tests.CheckoutTest","com.automation.tests.CheckoutTest","SelectCarDetails","SelectCarDetails",""
+"broken","Fri Feb 02 12:26:07 GST 2024","Fri Feb 02 12:26:07 GST 2024","180","Default Suite","AutoTrustDemo","com.automation.tests.Checkout","com.automation.tests.Checkout","SelectCarDetails","SelectCarDetails",""

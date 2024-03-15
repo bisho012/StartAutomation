@@ -1,0 +1,41 @@
+[ {
+  "uid" : "91f534d7ccbfe0b4",
+  "name" : "createAccount",
+  "time" : {
+    "start" : 1707133076484,
+    "stop" : 1707133080579,
+    "duration" : 4095
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3654728b1cece0f3",
+  "name" : "setUp",
+  "time" : {
+    "start" : 1706786019355,
+    "stop" : 1706786019357,
+    "duration" : 2
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "dba42e5baf4b8a",
+  "name" : "SelectCarDetails",
+  "time" : {
+    "start" : 1707126975159,
+    "stop" : 1707126990390,
+    "duration" : 15231
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9142ef2aa34dc133",
+  "name" : "SelectCarDetails",
+  "time" : {
+    "start" : 1706862367307,
+    "stop" : 1706862367487,
+    "duration" : 180
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,77 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Default Suite",
+    "children" : [ {
+      "name" : "AutoTrustDemo",
+      "children" : [ {
+        "name" : "com.automation.tests.RegisterTest",
+        "children" : [ {
+          "name" : "setUp",
+          "uid" : "3654728b1cece0f3",
+          "parentUid" : "3fdab8ada13c5541954684d490fc438e",
+          "status" : "broken",
+          "time" : {
+            "start" : 1706786019355,
+            "stop" : 1706786019357,
+            "duration" : 2
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "createAccount",
+          "uid" : "91f534d7ccbfe0b4",
+          "parentUid" : "3fdab8ada13c5541954684d490fc438e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1707133076484,
+            "stop" : 1707133080579,
+            "duration" : 4095
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "3fdab8ada13c5541954684d490fc438e"
+      }, {
+        "name" : "com.automation.tests.Checkout",
+        "children" : [ {
+          "name" : "SelectCarDetails",
+          "uid" : "9142ef2aa34dc133",
+          "parentUid" : "d0b652ec846c47c990c7c7735a43dc08",
+          "status" : "broken",
+          "time" : {
+            "start" : 1706862367307,
+            "stop" : 1706862367487,
+            "duration" : 180
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "d0b652ec846c47c990c7c7735a43dc08"
+      }, {
+        "name" : "com.automation.tests.CheckoutTest",
+        "children" : [ {
+          "name" : "SelectCarDetails",
+          "uid" : "dba42e5baf4b8a",
+          "parentUid" : "926776b2e89512db7ea5dd1d0597d3b3",
+          "status" : "passed",
+          "time" : {
+            "start" : 1707126975159,
+            "stop" : 1707126990390,
+            "duration" : 15231
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "926776b2e89512db7ea5dd1d0597d3b3"
+      } ],
+      "uid" : "150bd75daae5e0da44e0a9f9e35bd68b"
+    } ],
+    "uid" : "8399274b4bb69ec8699907dd6ef7de4e"
+  } ]
+}

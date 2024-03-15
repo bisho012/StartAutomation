@@ -8,18 +8,18 @@
   <artifactId>TestAutomation</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>CRUD_Operations</name>
+  <name>AutoTrust Demo</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://awr-autotrust-dgtl-website-wehxzjtmaq-ew.a.run.app/#s</url>
 
   <properties>
     <selenium.version>3.141.59</selenium.version>
-    <webdrivermanager.version>3.6.2</webdrivermanager.version>
+    <webdrivermanager.version>5.7.0</webdrivermanager.version>
     <testng.version>7.4.0</testng.version>
     <rest-assured.version>4.3.3</rest-assured.version>
-    <allure-testng.version>2.13.8</allure-testng.version>
-    <allure-maven.version>2.10.0</allure-maven.version>
-    <allure-maven-report.version>2.10.0</allure-maven-report.version>
+    <allure-testng.version>2.23.0</allure-testng.version>
+    <allure-maven.version>2.12.0</allure-maven.version>
+    <allure-maven-report.version>2.12.0</allure-maven-report.version>
     <extentreports.version>5.0.6</extentreports.version>
     <poi-ooxml.version>4.0.1</poi-ooxml.version>
     <commons-io.version>2.7</commons-io.version>
@@ -29,6 +29,7 @@
     <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <yandexAllure-version>2.3</yandexAllure-version>
   </properties>
 
   <dependencies>
@@ -98,6 +99,12 @@
       <artifactId>allure-environment-writer</artifactId>
       <version>1.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>ru.yandex.qatools.allure</groupId>
+      <artifactId>allure-report-builder</artifactId>
+      <version>${yandexAllure-version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>

@@ -1,0 +1,57 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "setUp",
+    "uid" : "3654728b1cece0f3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1706786019355,
+      "stop" : 1706786019357,
+      "duration" : 2
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "SelectCarDetails",
+    "uid" : "9142ef2aa34dc133",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1706862367307,
+      "stop" : 1706862367487,
+      "duration" : 180
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "SelectCarDetails",
+    "uid" : "dba42e5baf4b8a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1707126975159,
+      "stop" : 1707126990390,
+      "duration" : 15231
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "createAccount",
+    "uid" : "91f534d7ccbfe0b4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1707133076484,
+      "stop" : 1707133080579,
+      "duration" : 4095
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}
