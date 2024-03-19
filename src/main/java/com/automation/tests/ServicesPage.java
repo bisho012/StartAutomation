@@ -17,7 +17,8 @@ public class ServicesPage extends PageBase{
     private By btnCheckout = By.xpath("//div[@class='MuiGrid-root style_checkout_btn__MkF_D css-ahsd8r']//button[@type='submit']");
 
     public void clickCartPeriodicMaintenanceMajor() throws InterruptedException {
-        scrollToElementAndClick(btnAddToCartPeriodicMaintenanceMajor);
+        //scrollToElementAndClick(btnAddToCartPeriodicMaintenanceMajor);
+        waitButtonAndClick(btnAddToCartPeriodicMaintenanceMajor);
     }
     public void clickCartPeriodicMaintenanceMinor() throws InterruptedException {
         scrolldown();

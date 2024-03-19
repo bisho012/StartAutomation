@@ -8,7 +8,7 @@
   <artifactId>TestAutomation</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>AutoTrust Demo</name>
+  <name>AutoTrust</name>
   <!-- FIXME change it to the project's website -->
   <url>https://awr-autotrust-dgtl-website-wehxzjtmaq-ew.a.run.app/#s</url>
 
@@ -18,15 +18,14 @@
     <testng.version>7.4.0</testng.version>
     <rest-assured.version>4.3.3</rest-assured.version>
     <allure-testng.version>2.23.0</allure-testng.version>
-    <allure-maven.version>2.12.0</allure-maven.version>
-    <allure-maven-report.version>2.12.0</allure-maven-report.version>
+    <guava.version>31.1-jre</guava.version>
     <extentreports.version>5.0.6</extentreports.version>
     <poi-ooxml.version>4.0.1</poi-ooxml.version>
     <commons-io.version>2.7</commons-io.version>
-    <aspectj.version>1.9.6</aspectj.version>
+    <aspectj.version>1.9.21</aspectj.version>
     <slf4j.version>1.7.30</slf4j.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-    <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.2.1</maven-surefire-plugin.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <yandexAllure-version>2.3</yandexAllure-version>
@@ -64,6 +63,11 @@
       <version>${poi-ooxml.version}</version>
     </dependency>
     <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+    <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>${commons-io.version}</version>
@@ -78,7 +82,6 @@
       <artifactId>extentreports</artifactId>
       <version>${extentreports.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
@@ -111,14 +114,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>io.qameta.allure</groupId>
-          <artifactId>allure-maven</artifactId>
-          <version>${allure-maven.version}</version>
-          <configuration>
-            <reportVersion>${allure-maven-report.version}</reportVersion>
-          </configuration>
-        </plugin>
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin.version}</version>
@@ -147,6 +142,12 @@
                 <value>utils.TestngListener</value>
               </property>
             </properties>
+            <SystemProperties>
+              <property>
+                <name>allure.results.directory</name>
+                <value>target/allure-results</value>
+              </property>
+            </SystemProperties>
           </configuration>
 
           <dependencies>

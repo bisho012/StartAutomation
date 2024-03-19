@@ -1,0 +1,1 @@
+allure.bat allure serve allure-results

@@ -2,11 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/BishoyEzzat/IdeaProjects/TestAutomationPractice/src/test/java/com/automation/tests">
+          name="../src/test/java/com/automation/tests">
         <classes>
-            <class name="com.automation.tests.RegisterTest">
+            <class name="com.automation.tests.CheckoutTest">
                 <methods>
-                    <include name="createAccount"/>
+                    <include name="CheckoutServicesDriveToGarageCash"/>
+                    <include name="CheckoutServicesPickUpCash"/>
                 </methods>
             </class>
         </classes>
