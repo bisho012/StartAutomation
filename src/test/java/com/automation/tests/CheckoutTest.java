@@ -1,5 +1,6 @@
 package com.automation.tests;
 
+import com.automation.remarks.video.annotations.Video;
 import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,6 +14,7 @@ public class CheckoutTest extends TestBase{
     String lastName = faker.name().lastName();
     String phoneNumber = faker.numerify("561616940");
     @Test(priority = 1)
+    @Video(name = "Checkout Drive to garage - cash")
     public void CheckoutServicesDriveToGarageCash() throws InterruptedException, AWTException {
         homePage.waitPageToLoad();
         homePage.selectBrand();
@@ -27,16 +29,16 @@ public class CheckoutTest extends TestBase{
         //servicesPage.setDiscountCode("erdf");
         servicesPage.clickCheckout();
         cartPage.waitPageToLoad();
-        cartPage.scrolldown();
+        cartPage.scrollDown();
         cartPage.clickProceedToCheckout();
         loginPopUpPage.clickCheckoutAsGuest();
         Thread.sleep(3000);
         checkOutPage.waitUntilPageLoad();
         checkOutPage.clickAutoTrustAwirService();
-        checkOutPage.scrolldown();
+        checkOutPage.scrollDown();
         checkOutPage.clickBtnSelectTime();
         checkOutPage.clickNo();
-        checkOutPage.scrolldown();
+        checkOutPage.scrollDown();
         checkOutPage.selectSalutation();
         Thread.sleep(1000);
         checkOutPage.setFirstName(firstName);
@@ -46,19 +48,20 @@ public class CheckoutTest extends TestBase{
         checkOutPage.setOTP("0");
         checkOutPage.clickVerifyConfirm();
         checkOutPage.setEmail(emailAddress);
-        checkOutPage.scrolldown();
+        checkOutPage.scrollDown();
         checkOutPage.selectEmiratie();
         checkOutPage.selectCategory();
         checkOutPage.setPlateNumber("738065");
+        checkOutPage.scrollDown();
         checkOutPage.clickCashOnDelivery();
         checkOutPage.clickPreviewPay();
         underReviewPage.waitPageToLoad();
-        underReviewPage.scrolldown();
+        underReviewPage.scrollDown();
         Assert.assertEquals(underReviewPage.getEmailText(),"DragonBisho@ibtest.com");
         Assert.assertEquals(underReviewPage.getRequestStatus(), "Booking Received");
     }
-
     @Test(priority = 2)
+    @Video(name = "Checkout pickup - cash")
     public void CheckoutServicesPickUpCash() throws InterruptedException, AWTException {
         homePage.waitPageToLoad();
         homePage.selectBrand();
@@ -73,7 +76,7 @@ public class CheckoutTest extends TestBase{
         //servicesPage.setDiscountCode("erdf");
         servicesPage.clickCheckout();
         cartPage.waitPageToLoad();
-        cartPage.scrolldown();
+        cartPage.scrollDown();
         cartPage.clickProceedToCheckout();
         loginPopUpPage.clickCheckoutAsGuest();
         Thread.sleep(3000);
@@ -85,6 +88,7 @@ public class CheckoutTest extends TestBase{
         checkOutPage.setBuildingName(faker.address().buildingNumber());
         checkOutPage.setNearestLandmark("Dragon Mart");
         checkOutPage.selectPickUpEmiratie();
+        Thread.sleep(1000);
         checkOutPage.clickConfirm();
         checkOutPage.clickYes();
         checkOutPage.clickBtnSelectTime();
@@ -97,14 +101,15 @@ public class CheckoutTest extends TestBase{
         checkOutPage.setOTP("0");
         checkOutPage.clickVerifyConfirm();
         checkOutPage.setEmail(emailAddress);
-        checkOutPage.scrolldown();
+        checkOutPage.scrollDown();
         checkOutPage.selectEmiratie();
         checkOutPage.selectCategory();
         checkOutPage.setPlateNumber("738065");
+        checkOutPage.scrollDown();
         checkOutPage.clickCashOnDelivery();
         checkOutPage.clickPreviewPay();
         underReviewPage.waitPageToLoad();
-        underReviewPage.scrolldown();
+        underReviewPage.scrollDown();
         Assert.assertEquals(underReviewPage.getEmailText(),"DragonBisho@ibtest.com");
         Assert.assertEquals(underReviewPage.getRequestStatus(), "Booking Received");
     }

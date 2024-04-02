@@ -8,7 +8,7 @@ public class CartPage extends PageBase{
         super(driver);
     }
 
-    private By btnProceedToCheckout = By.xpath("//p[normalize-space()='Proceed to Checkout']");
+    private final By btnProceedToCheckout = By.xpath("//p[normalize-space()='Proceed to Checkout']");
 
     public void clickProceedToCheckout() throws InterruptedException {
         scrollToElementAndClick(btnProceedToCheckout);

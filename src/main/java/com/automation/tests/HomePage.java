@@ -10,35 +10,32 @@ public class HomePage extends PageBase {
         super(driver);
     }
 
-    private By btnLoginSignIn = By.xpath("//p[normalize-space()='Login/Signup']");
-    private By ddlBrand = By.id("brandSelect");
-    private By ddlModel = By.id("modelSelect");
-    private By ddlYear = By.id("yearSelect");
-    private By btnBookNow = By.xpath("//div[@class='MuiGrid-root css-1yvh0jd']//button[@type='submit']");
-    private By btnMyAccount = By.xpath("//img[contains(@alt,'my-account')]");
-    private By btnLocations = By.xpath("//p[normalize-space()='Locations']");
-    private By lblHeader = By.xpath("//h1[normalize-space()='Experience hassle free car service!']");
-    private By btnMaintenanceContractSection = By.xpath("//p[normalize-space()='Maintenance Contracts']");
+    private final By btnLoginSignIn = By.xpath("//p[normalize-space()='Login/Signup']");
+    private final By ddlBrand = By.id("brandSelect");
+    private final By ddlModel = By.id("modelSelect");
+    private final By ddlYear = By.id("yearSelect");
+    private final By btnBookNow = By.xpath("//div[@class='MuiGrid-root css-1yvh0jd']//button[@type='submit']");
+    private final By btnMyAccount = By.xpath("//img[contains(@alt,'my-account')]");
+    private final By btnLocations = By.xpath("//p[normalize-space()='Locations']");
+    private final By lblHeader = By.xpath("//h1[normalize-space()='Experience hassle free car service!']");
+    private final By btnMaintenanceContractSection = By.xpath("//p[normalize-space()='Maintenance Contracts']");
+    private final By btnEnquireNow = By.xpath("(//p[normalize-space()='Enquire Now'])[1]");
     @Step("Press Login/SignIn Button")
     public void clickLoginSignIn() {
         click(btnLoginSignIn);
     }
-
     @Step("Select 1st Brand From brand list")
     public void selectBrand(){
         SelectDataPerform(ddlBrand);
     }
-
     @Step("Select 1st Model from model List")
     public void selectModel(){
         SelectDataPerform(ddlModel);
     }
-
     @Step("Select 1st Model from model List")
     public void selectYear(){
         SelectDataPerform(ddlYear);
     }
-
     @Step("Press Book Now")
     public void clickBookNow(){
         click(btnBookNow);
@@ -59,4 +56,9 @@ public class HomePage extends PageBase {
     public void clickMaintenanceContracts(){
         click(btnMaintenanceContractSection);
     }
+    @Step("Press Enquire now of Elite Service Contract")
+    public void clickEnquireNow() {
+        clickPerform(btnEnquireNow);
+    }
+
 }

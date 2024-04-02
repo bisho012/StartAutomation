@@ -1,10 +1,9 @@
 package com.automation.tests;
 
 
-import Utils.ExcelFileManager;
+import com.automation.remarks.video.annotations.Video;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -17,10 +16,11 @@ public class RegisterTest extends TestBase {
     String phoneNumber = faker.numerify("561616940");
 
     @Test
+    @Video(name = "Create Account")
     @Step("Create Account")
     public void createAccount() throws IOException, InterruptedException {
         homePage.clickLoginSignIn();
-        signInLoginPage.scrolldown();
+        signInLoginPage.scrollDown();
         signInLoginPage.clickSignUp();
         signUpPage.selectSalutation();
         signUpPage.setFirstName(FName);

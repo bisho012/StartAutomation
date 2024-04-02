@@ -1,13 +1,15 @@
 package com.automation.tests;
 
+import com.automation.remarks.video.annotations.Video;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
     @Test
+    @Video(name = "Login With Valid User")
     public void LoginWithValidUser() throws InterruptedException {
         homePage.clickLoginSignIn();
-        signInLoginPage.scrolldown();
+        signInLoginPage.scrollDown();
         signInLoginPage.setEmail("janaki.narayanan@awrostamani.com");
         signInLoginPage.setPassword("Test@123");
         signInLoginPage.clickSignIn();
@@ -18,9 +20,10 @@ public class LoginTest extends TestBase {
     }
 
     @Test
+    @Video(name = "Login With Non valid User")
     public void LoginWithNonValidUser() {
         homePage.clickLoginSignIn();
-        signInLoginPage.scrolldown();
+        signInLoginPage.scrollDown();
         signInLoginPage.setEmail("janaki.narayanan@awrostamani.com");
         signInLoginPage.setPassword("Test@Test@123");
         signInLoginPage.clickSignIn();
@@ -28,6 +31,7 @@ public class LoginTest extends TestBase {
     }
 
     @Test
+    @Video(name = "Sign Out")
     public void SignOut() throws InterruptedException {
         LoginWithValidUser();
         accountPage.clickSignOut();

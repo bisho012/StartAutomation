@@ -9,10 +9,10 @@ public class AccountPage extends PageBase{
         super(driver);
     }
 
-    private By lblName = By.xpath("//p[normalize-space()='Hi Janaki Narayanan!']");
-    private By btnSignOut = By.xpath("//img[@alt='Sign Out']");
-    private By btnYes = By.id("yesBtn");
-    private By btnLogoHomePage = By.xpath("//img[@alt='Logo']");
+    private final By lblName = By.xpath("//p[normalize-space()='Hi Janaki Narayanan!']");
+    private final By btnSignOut = By.xpath("//img[@alt='Sign Out']");
+    private final By btnYes = By.id("yesBtn");
+    private final By btnLogoHomePage = By.xpath("//img[@alt='Logo']");
 
     public String getName(){
         return getContent(lblName);

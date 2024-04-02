@@ -1,6 +1,8 @@
 package com.automation.tests;
 
 
+import com.automation.remarks.testng.UniversalVideoListener;
+import com.automation.remarks.video.enums.RecordingMode;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +10,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
+import org.testng.annotations.Listeners;
+@Listeners(UniversalVideoListener.class)
 public class TestBase {
     WebDriver driver;
     HomePage homePage;
@@ -21,10 +24,13 @@ public class TestBase {
     UnderReviewPage underReviewPage;
     AccountPage accountPage;
     LocationsPage locationsPage;
+    EnquirePage enquirePage;
     private final String url="https://awr-autotrust-dgtl-website-wehxzjtmaq-ew.a.run.app/#s";
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
+        System.setProperty("video.save.mode", RecordingMode.ALL.toString());
+
         WebDriverManager.chromedriver().browserVersion("122").setup();
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         ChromeOptions options = new ChromeOptions();
@@ -41,13 +47,14 @@ public class TestBase {
         underReviewPage = new UnderReviewPage(driver);
         accountPage = new AccountPage(driver);
         locationsPage = new LocationsPage(driver);
+        enquirePage = new EnquirePage(driver);
         driver.manage().window().maximize();
         driver.navigate().to(url);
     }
 
     @AfterMethod
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
 }

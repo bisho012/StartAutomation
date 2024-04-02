@@ -85,7 +85,7 @@ public class PageBase {
         return action(locator).getText();
     }
 
-    public void scrolldown(){
+    public void scrollDown(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("javascript:window.scrollBy(0,250)");
     }
@@ -123,6 +123,14 @@ public class PageBase {
         //Double click on element
         WebElement ele = action(locator);
         act.doubleClick(ele).perform();
+    }
+
+    public void clickPerform(By locator){
+        waitElement(locator);
+        Actions act = new Actions(driver);
+        //click on element
+        WebElement ele = action(locator);
+        act.click(ele).perform();
     }
 
     public void SelectDataPerformDoubleClick(By locator){
