@@ -16,6 +16,7 @@ public class SignUpPage extends PageBase{
     private By btnSignUp = By.xpath("//button[@type='submit']");
     private By ddlSalutation = By.xpath("//div[contains(text(),'Select Salutation')]");
     private By ddlSalutationValue = By.xpath("//li[normalize-space()='Mr']");
+    private By txtErrMsg = By.xpath("//p[normalize-space()='Phone number already in use. Please login.']");
 
     @Step("Set First Name")
     public void setFirstName(String firstName){
@@ -41,5 +42,15 @@ public class SignUpPage extends PageBase{
     public void selectSalutation() throws InterruptedException {
         scrollToElementAndClick(ddlSalutation);
         scrollToElementAndClick(ddlSalutationValue);
+    }
+    @Step("Error message Appears")
+    public boolean isErrorMsgDisplayed(){
+        waitElement(txtErrMsg);
+        return isDisplayed(txtErrMsg);
+    }
+
+    @Step("Error message Value")
+    public String ErrMsg(){
+        return getContent(txtErrMsg);
     }
 }

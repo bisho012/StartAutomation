@@ -13,7 +13,7 @@ public class LoginTest extends TestBase {
         signInLoginPage.setEmail("janaki.narayanan@awrostamani.com");
         signInLoginPage.setPassword("Test@123");
         signInLoginPage.clickSignIn();
-        checkOutPage.clickHomePageLogo();
+        //checkOutPage.clickHomePageLogo();
         homePage.clickMyAccount();
         accountPage.waitPageToLoad();
         Assert.assertEquals("Hi Janaki Narayanan!", accountPage.getName());
@@ -25,7 +25,7 @@ public class LoginTest extends TestBase {
         homePage.clickLoginSignIn();
         signInLoginPage.scrollDown();
         signInLoginPage.setEmail("janaki.narayanan@awrostamani.com");
-        signInLoginPage.setPassword("Test@Test@123");
+        signInLoginPage.setPassword("Test@test@123");
         signInLoginPage.clickSignIn();
         Assert.assertEquals("Invalid Email/Phone number or Password",signInLoginPage.getErrorMsg());
     }

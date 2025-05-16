@@ -4,6 +4,7 @@ package com.automation.tests;
 import com.automation.remarks.video.annotations.Video;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class RegisterTest extends TestBase {
     @Test
     @Video(name = "Create Account")
     @Step("Create Account")
-    public void createAccount() throws IOException, InterruptedException {
+    public void createPreviouslyCreatedAccount() throws IOException, InterruptedException {
         homePage.clickLoginSignIn();
         signInLoginPage.scrollDown();
         signInLoginPage.clickSignUp();
@@ -28,5 +29,7 @@ public class RegisterTest extends TestBase {
         signUpPage.setEmail(emailAddress);
         signUpPage.setPhoneNumber(phoneNumber);
         signUpPage.clickSignUp();
+        Assert.assertTrue(signUpPage.isErrorMsgDisplayed());
+        Assert.assertEquals("Phone number already in use. Please login.", signUpPage.ErrMsg());
     }
 }

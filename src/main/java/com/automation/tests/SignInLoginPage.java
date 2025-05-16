@@ -9,7 +9,7 @@ public class SignInLoginPage extends PageBase{
         super(driver);
     }
 
-    private By btnSignUp = By.xpath("//a[@href='https://awr-autotrust-dgtl-website-wehxzjtmaq-ew.a.run.app/sign-up']");
+    private By btnSignUp = By.xpath("//a[@href='https://test.autotrustdgtl.awr-api.com/sign-up']");
     private By txtEmail = By.id("login");
     private By txtPassword = By.id("password");
     private By btnSignIn = By.id("signin");
@@ -17,7 +17,7 @@ public class SignInLoginPage extends PageBase{
 
     @Step("Click Sign Up")
     public void clickSignUp() {
-        doubleClick(btnSignUp);
+        clickPerform(btnSignUp);
     }
     @Step("Set Email")
     public void setEmail(String email){
@@ -34,4 +34,5 @@ public class SignInLoginPage extends PageBase{
     public String getErrorMsg(){
         return getContent(lblErrormsg);
     }
+
 }

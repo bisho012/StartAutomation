@@ -25,13 +25,13 @@ public class TestBase {
     AccountPage accountPage;
     LocationsPage locationsPage;
     EnquirePage enquirePage;
-    private final String url="https://awr-autotrust-dgtl-website-wehxzjtmaq-ew.a.run.app/#s";
+    private final String url="https://test.autotrustdgtl.awr-api.com/";
 
     @BeforeMethod
     public void setUp() {
         System.setProperty("video.save.mode", RecordingMode.ALL.toString());
 
-        WebDriverManager.chromedriver().browserVersion("122").setup();
+        WebDriverManager.chromedriver().browserVersion("132").setup();
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("incognito");
